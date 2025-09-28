@@ -2,18 +2,18 @@
 
   .btn--secondary {
     &:active {
-      background-color: #d14a00;
+      color: #d14a00;
     }
 
     @media (hover: hover) {
       &:hover,
       &:focus {
-        background-color: #f15c27;
+        color: #f15c27;
       }
     }
 
     &[disabled] {
-      background-color: #b5b5be;
+      color: #b5b5be;
     }
   }
 }

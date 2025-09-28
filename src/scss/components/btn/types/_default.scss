@@ -4,7 +4,7 @@
     background-color: #92929d;
 
     &:active {
-      background-color: darken($color: 92929D, $amount: 10%);
+      background-color: darken(#92929D, 10%);
     }
 
     @media (hover: hover) {
