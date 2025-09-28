@@ -1,6 +1,6 @@
 @if index($btn-types, danger) {
 
-  .btn--primary {
+  .btn--danger {
     background-color: #fc5A5A;
 
     &:active {

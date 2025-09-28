@@ -23,6 +23,13 @@ $btn-types: (
   frame
 );
 
-@import "btn-base";
+@import 'btn-base';
 
-@import "types/primary";
+@import 'types/primary';
+@import 'types/secondary';
+@import 'types/default';
+@import 'types/danger';
+@import 'types/warning';
+@import 'types/success';
+@import 'types/info';
+@import 'types/frame';

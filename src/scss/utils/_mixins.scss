@@ -1,12 +1,12 @@
-@use "sass:map";
-@use "sass:list";
+@use 'sass:map';
+@use 'sass:list';
 
-@use "./variables" as var;
-@use "./functions" as fn;
+@use 'variables' as var;
+@use 'functions' as fn;
 
 @mixin mq($bp: sm, $type: min, $is-retina: false) {
   @if map.has-key(var.$breakpoints, $bp) {
-    $width: map-get(var.$breakpoints, $bp);
+    $width: map.get(var.$breakpoints, $bp);
 
     @if $type == max {
       $width: $width - 0.02px;
@@ -23,6 +23,8 @@
         @content;
       }
     }
+  } @else {
+    @error "false input";
   }
 }
 
@@ -51,18 +53,18 @@
     border-radius: 100px;
 
     &:hover {
-      background-color: rgba($color: #fff, $alpha: 0.3);
+      background-color: rgba(#fff, 0.3);
     }
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: fn.get-color("light-secondary");
+    background-color: fn.get-color('light-secondary');
     background-clip: content-box;
     border: 5px solid transparent;
     border-radius: 100px;
 
     &:hover {
-      background-color: fn.get-color("accent-primary");
+      background-color: fn.get-color('accent-primary');
     }
   }
 }
@@ -73,7 +75,7 @@
 
     transition: $ease;
   } @else {
-    @warn 'The variable $ease is not defined';
+    @warn "The variable $ease is not defined";
   }
 
   @if list.length($properties) > 0 {
